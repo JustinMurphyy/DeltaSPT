@@ -6,6 +6,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/RELEASE-NOTES.md
 
 # Reproducible client-pack builder. The live connection note is deliberately
 # excluded because it contains a host address that should only be shared privately.

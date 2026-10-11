@@ -23,6 +23,20 @@ Get-ChildItem -LiteralPath (Join-Path $source 'BepInEx\plugins') -Force | Where-
 }
 Copy-Item -Path (Join-Path $source 'BepInEx\config\*') -Destination (Join-Path $payload 'BepInEx\config') -Recurse -Force
 
+# Fika writes every detected host network adapter into an informational comment.
+# It is not needed by clients and can expose LAN/VPN/public addresses in a pack.
+$fikaConfig = Join-Path $payload 'BepInEx\config\com.fika.core.cfg'
+if (Test-Path -LiteralPath $fikaConfig) {
+    $sanitizedFikaConfig = Get-Content -LiteralPath $fikaConfig | ForEach-Object {
+        if ($_ -match '^# Acceptable values: Disabled, 0\.0\.0\.0, ::,') {
+            '# Network adapter choices are generated locally on first launch.'
+        } else {
+            $_
+        }
+    }
+    $sanitizedFikaConfig | Set-Content -LiteralPath $fikaConfig -Encoding UTF8
+}
+
 foreach ($name in @('FRIEND-INSTALL.ps1','INSTALL-FRIEND-PACK.cmd','VERIFY-FRIEND-PACK.ps1','FRIEND-GUIDE.html','OPEN-GUIDE.cmd','FRIEND-README.txt','FRIEND-QUICK-START.png','FRIEND-QUICK-START-REMOTE.png')) {
     Copy-Item -LiteralPath (Join-Path $templateRoot $name) -Destination $pack
 }
