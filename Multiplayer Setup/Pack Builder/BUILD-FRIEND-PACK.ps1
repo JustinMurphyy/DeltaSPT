@@ -9,7 +9,7 @@ while ($source -and -not (Test-Path -LiteralPath (Join-Path $source 'EscapeFromT
     $source = $parent
 }
 if (-not $OutputRoot) { $OutputRoot = Split-Path $templateRoot -Parent }
-$packName = 'SPT-Fika-CLIENT-Pack-4.1.6-native-ai-client.4'
+$packName = 'SPT-Fika-CLIENT-Pack-4.1.6-native-ai-client.5'
 $pack = Join-Path $OutputRoot $packName
 if (Test-Path -LiteralPath $pack) { throw "Output already exists: $pack" }
 
@@ -47,7 +47,7 @@ $files = Get-ChildItem -LiteralPath $payloadFull -Recurse -File | ForEach-Object
     }
 }
 $manifest = [ordered]@{
-    packVersion = '2026.10.11-native-ai-client.4'
+    packVersion = '2026.10.11-native-ai-client.5'
     createdUtc = [DateTime]::UtcNow.ToString('o')
     sptVersion = '4.1.6'
     eftVersion = '0.16.9.40743'

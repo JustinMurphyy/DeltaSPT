@@ -7,7 +7,7 @@ the host's real connection address.
 
 ## Current release
 
-`SPT-Fika-CLIENT-Pack-4.1.6-native-ai-client.4.zip`
+`SPT-Fika-CLIENT-Pack-4.1.6-native-ai-client.5.zip`
 
 - SPT 4.1.6 / EFT 0.16.9.40743
 - Fika client 2.4.4; host server 2.4.2
@@ -18,8 +18,8 @@ the host's real connection address.
   Vita, Rook, Ledger, and Cipher), 1,164 offers, and 64 data-only story quests
 - All original SPT/EFT traders remain intact; the host currently registers 23
   unique trader/service definitions with no ID collisions
-- Includes a locally rebuilt SPT 4.1.6 Adjustable Trader Rows client fix,
-  configured for eight cards per row so large rosters remain clickable
+- Includes a guarded SPT 4.1.6 port of Kaeno Trader Scrolling, which makes the
+  oversized trader header horizontally scrollable and keeps cards clickable
 - Includes the matching client pieces for custom content, UI fixes, maps,
   TraderGen, trader/weapon-builder search, Bright Lasers, and other active QOL
 - SHA-256 manifest verification is included inside the pack
