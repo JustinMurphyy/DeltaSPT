@@ -31,3 +31,7 @@ hashes every payload file, and writes a privacy-safe connection placeholder.
 Update the versioned allowlist in `.gitignore`, verify the pack, create the ZIP,
 then update its SHA-256 sidecar.
 
+## Credit & Distribution
+
+All of the mod packs are used from other developers. Delta does not take any credit for the development or creation/maintainer of these mods.
+We support all creators of all mods and additions we use. 
