@@ -1,11 +1,4 @@
-# SPT 4.1.6 Fika native-AI client pack
-
-This private distribution repo contains only the files a client needs to match
-the host's client-side SPT/Fika mod set.
-
 ## Current release
-
-`SPT-Fika-CLIENT-Pack-4.1.6-native-ai-client.5.zip`
 
 - SPT 4.1.6 / EFT 0.16.9.40743
 - Fika client 2.4.4; host server 2.4.2
